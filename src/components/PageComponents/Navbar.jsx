@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
 import { Spiral as Hamburger } from "hamburger-react";
-import Icon from "../assets/img/navigator.png";
+import Icon from "../../assets/img/navigator.png";
 import { useState } from "react";
 function Navbar() {
   const [isOpen, setOpen] = useState(false);

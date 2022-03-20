@@ -35,6 +35,9 @@ module.exports = {
         remainingCols:
           "grid-auto-rows: minmax(min-content, max-content) 1fr 1fr",
       },
+      height: {
+        200: "370vh", // p-80% - should work
+      },
     },
   },
   daisyui: {

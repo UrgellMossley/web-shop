@@ -12,10 +12,10 @@ function CaroselContainer({ child }) {
         {child.map((item, index) => {
           return (
             <div
+              key={index}
               id={index}
               className="relative grid grid-rows-4 carousel-item w-full min-w-full self-center h-full"
             >
-              {item.title}
               <a
                 className="hidden xs:block absolute bottom-1/2 left-32 text-3xl text-black"
                 href={index === 0 ? `#${child.length - 1}` : `#${index - 1}`}
