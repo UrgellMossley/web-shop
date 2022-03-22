@@ -7,8 +7,8 @@ import PropTypes from "prop-types";
 
 function CaroselContainer({ child }) {
   return (
-    <section className="flex px-1 flex-col h-4/5">
-      <article className="w-full carousel ">
+    <section className="flex px-1 flex-col items-center h-4/5">
+      <article className="w-full sm:w-1/2 carousel ">
         {child.map((item, index) => {
           return (
             <div
@@ -40,7 +40,7 @@ function CaroselContainer({ child }) {
                     <button>
                       <FaShoppingCart className="text-white text-2xl" />
                     </button>
-                    <button className="btn btn-sm md:btn-lg text-white text-2xl btn-active btn-primary">
+                    <button className="btn  btn-sm md:btn-lg text-white text-2xl btn-active btn-primary">
                       Buy Now
                     </button>
                   </div>

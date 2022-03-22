@@ -4,7 +4,7 @@ function Footer() {
   const footerYear = new Date().getFullYear();
 
   return (
-    <footer className="footer h-1/4 flex flex-row py-4 shadow-md bg-black justify-between">
+    <footer className="footer flex flex-row py-4 shadow-md bg-black justify-between">
       <nav className="flex flex-row justify-between pl-2 w-20">
         <a href="https://github.com/UrgellMossley/BlogProject">
           <FaGithub className="hover:text-purple-900 text-3xl text-slate-200" />

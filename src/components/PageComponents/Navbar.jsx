@@ -1,6 +1,15 @@
 import { NavLink } from "react-router-dom";
 import { Spiral as Hamburger } from "hamburger-react";
 import Icon from "../../assets/img/navigator.png";
+import {
+  FaCartPlus,
+  FaHome,
+  FaQuestion,
+  FaShoppingBasket,
+  FaShoppingCart,
+  FaUser,
+} from "react-icons/fa";
+
 import { useState } from "react";
 function Navbar() {
   const [isOpen, setOpen] = useState(false);
@@ -27,16 +36,20 @@ function Navbar() {
         <section className="hidden md:flex navbar-end pr-10">
           <ul className="  flex flex-row justify-end w-1/2 h-1/2 min-w-1/2">
             <li className="ml-5 text-black font-bold border-b-3 border-white">
-              Home
+              <FaHome className="text-3xl" />
             </li>
             <li className="ml-5 text-black font-bold border-b-3 border-white">
-              Profile
+              <FaUser className="text-3xl" />
             </li>
             <li className="ml-5 text-black font-bold border-b-3 border-white">
-              Cart
+              <NavLink to="/cart">
+                <FaShoppingBasket className="text-3xl" />
+              </NavLink>
             </li>
             <li className="ml-5 text-black font-bold border-b-3 border-white">
-              About
+              <NavLink to="/about">
+                <FaQuestion className="text-3xl" />
+              </NavLink>
             </li>
           </ul>
         </section>

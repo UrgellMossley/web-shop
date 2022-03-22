@@ -1,22 +1,20 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Header from "./components/PageComponents/Header";
 import Navbar from "./components/PageComponents/Navbar";
-import TopPicks from "./components/TopPicks";
-import CategoriesGrid from "./components/CategoriesGrid";
-import SummerSplash from "./components/SummerSplash";
+import Cart from "./components/Pages/Cart";
 import Footer from "./components/PageComponents/Footer";
+import Home from "./components/Pages/Home";
 const App = () => {
   return (
     <>
       <Router>
         <div className="bg-sand font-quickSand overflow-x-hidden flex flex-col min-h-screen h-screen max-w-screen w-screen">
           <Navbar />
-          <Header />
-          <TopPicks />
-          <CategoriesGrid />
-          <SummerSplash />
           <Routes>
-            <Route path="/" />
+            <Route path="/" element={<Home />} />
+            <Route path="/about" />
+            <Route path="/profile/:id" />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/*" />
           </Routes>
           <Footer />
         </div>
