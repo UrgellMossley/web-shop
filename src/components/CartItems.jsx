@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Link } from "react-router-dom";
-function CartItems({ props }) {
+import BackToShop from "./PageComponents/BackToShop";
+import CartItemComponent from "./CartItemComponent";
+function CartItems({ itemList }) {
+  //element to be displayed if there are no items in the cart
   const returnToShop = (
     <div className="py-2 mt-2 flex flex-col items-center">
       <h3 className="text-center py-2 font-bold text-2xl">
@@ -11,27 +13,25 @@ function CartItems({ props }) {
       <p className="font-bold text-lg text-center pb-1 my-2">
         Let's Do Something About That...
       </p>
-      <Link className="w-2/3" to="/">
-        <button className="btn bg-black w-full text-white text-lg btn-primary active:bg-black">
-          back to Shop
-        </button>
-      </Link>
     </div>
   );
-
+  //if the user has items loop through tha arr and append each one to the DOM, if not then display a message calling the user back to the shop
   return (
-    <div>
-      {props.length > 0
-        ? props.map((item) => {
-            return item.name;
-          })
-        : returnToShop}
+    <div className="mt-1">
+      {itemList.length > 0 ? (
+        <CartItemComponent itemList={itemList} />
+      ) : (
+        returnToShop
+      )}
+      {/* btn component which is a link back to main page conditional styling depending on if there are items or not */}
+
+      <BackToShop className={`w-1/4`} />
     </div>
   );
 }
 
 CartItems.propTypes = {
-  props: PropTypes.array.isRequired,
+  itemList: PropTypes.arrayOf(Object).isRequired,
 };
 
 export default CartItems;

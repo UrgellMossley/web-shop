@@ -2,10 +2,48 @@ import React from "react";
 import { FaEllipsisH } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import CartItems from "../CartItems";
+import pic from "../../assets/img/shirt1.jpg";
 function Cart() {
-  const arr = [];
+  const arr = [
+    {
+      name: "t-shirt",
+      price: 34.99,
+      description: "This is a nice shirt",
+      img: pic,
+    },
+    {
+      name: "t-shirt",
+      price: 34.99,
+      description: "This is a nice shirt",
+      img: pic,
+    },
+    {
+      name: "t-shirt",
+      price: 34.99,
+      description: "This is a nice shirt",
+      img: pic,
+    },
+    {
+      name: "t-shirt",
+      price: 34.99,
+      description: "This is a nice shirt",
+      img: pic,
+    },
+    {
+      name: "t-shirt",
+      price: 34.99,
+      description: "This is a nice shirt",
+      img: pic,
+    },
+    {
+      name: "t-shirt",
+      price: 34.99,
+      description: "This is a nice shirt",
+      img: pic,
+    },
+  ];
   return (
-    <section className="h-full flex-col">
+    <section className="min-h-fit h-fit flex-col">
       <section className="flex justify-between w-4/5">
         {" "}
         <h1 className="text-left text-4xl py-4 my-2 pl-10 font-bold">
@@ -32,7 +70,7 @@ function Cart() {
             </p>
           </div>
         </article>
-        <CartItems props={arr} />
+        <CartItems itemList={arr} />
       </section>
     </section>
   );
